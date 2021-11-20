@@ -15,6 +15,7 @@ function App() {
       }
     });
   }, []);
+  
 
   function handleLogin(user) {
     setUser(user);
@@ -23,7 +24,12 @@ function App() {
   function handleLogout() {
     setUser(null);
   }
-
+  // if (user) {
+  //   return <h2>Welcome, {user.username}!</h2>;
+  // } else {
+  //   return <Login onLogin={setUser} />;
+  // }
+  
   return (
     <div className="App">
       <Header user={user} onLogout={handleLogout} />
